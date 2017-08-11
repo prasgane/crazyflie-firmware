@@ -186,6 +186,8 @@ PROJ_OBJ_CF2 += deck_analog.o
 PROJ_OBJ_CF2 += deck_spi.o
 
 # Decks
+PROJ_OBJ_CF2 += adxl345.o
+PROJ_OBJ_CF2 += hello.o
 PROJ_OBJ_CF2 += bigquad.o
 PROJ_OBJ_CF2 += rzr.o
 PROJ_OBJ_CF2 += ledring12.o

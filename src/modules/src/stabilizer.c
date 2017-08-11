@@ -40,7 +40,7 @@
 #include "sitaw.h"
 #include "controller.h"
 #include "power_distribution.h"
-
+#include "adxl345.h"
 #include "estimator_kalman.h"
 #include "estimator.h"
 

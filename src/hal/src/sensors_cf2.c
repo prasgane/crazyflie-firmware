@@ -39,6 +39,7 @@
 #include "mpu6500.h"
 #include "ak8963.h"
 #include "vl53l0x.h"
+#include "adxl345.h"
 
 #include "FreeRTOS.h"
 #include "semphr.h"
@@ -109,6 +110,7 @@ static xQueueHandle gyroDataQueue;
 static xQueueHandle magnetometerDataQueue;
 static xQueueHandle barometerDataQueue;
 static xSemaphoreHandle sensorsDataReady;
+static xQueueHandle adxlDataQueue;
 
 static bool isInit = false;
 static sensorData_t sensors;
@@ -316,6 +318,9 @@ static void sensorsDeviceInit(void)
 
   i2cdevInit(I2C3_DEV);
   mpu6500Init(I2C3_DEV);
+
+  
+
   if (mpu6500TestConnection() == true)
   {
     DEBUG_PRINT("MPU9250 I2C connection [OK].\n");
