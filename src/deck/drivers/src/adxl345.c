@@ -40,7 +40,10 @@ bool adxlTest()
     	return false;
 
     testStatus = adxlTestConnection();
-    DEBUG_PRINT("ADXL345 Test Complete! \n");
+		if(!testStatus)
+			DEBUG_PRINT("ADXL345 Test Complete! \n");
+		else
+			DEBUG_PRINT("ADXL345 Test Complete! \n");
 
     return testStatus;
 }
