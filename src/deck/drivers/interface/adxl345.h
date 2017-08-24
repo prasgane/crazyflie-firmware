@@ -167,12 +167,13 @@ THE SOFTWARE.
 
 void adxl345Init(DeckInfo* info);
 
-bool adxlTest(); 
+bool adxlTest();
 bool adxlTestConnection();
 uint8_t adxlGetDeviceID();
 
 void adxlgetAcceleration(int16_t* x, int16_t* y, int16_t* z);
 
+void adxl345Task(void* arg);
 /*
 void setRange(uint8_t range);
 uint8_t getRange();
@@ -187,6 +188,6 @@ int16_t getAccelerationZ();
 bool getLowPowerEnabled();
 void setLowPowerEnabled(bool enabled);
 */
-       
+
 
 #endif
